@@ -33,4 +33,8 @@ io.on('connection', function (socket) {
         console.log(data)
         io.emit('time', data)
     })
+    socket.on('new-token', function (data) {
+        console.log(data)
+        io.emit('token', data)
+    })
 })
